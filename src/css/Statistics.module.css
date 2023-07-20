@@ -116,8 +116,6 @@ section {
 	height: 54px;
 	border: none;
 	border-radius: 12px;
-}
-
-.btn a {
-	height: 54px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
