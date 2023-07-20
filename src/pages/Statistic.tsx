@@ -9,7 +9,7 @@ import request from "sync-request";
 const Statistic: Component = () => {
 	let todayCoffee = request("GET", "https://sunrinthon.ny64.kr/data/7").body;
 	let coffee = request("GET", "https://sunrinthon.ny64.kr/data/7/coffee").body;
-	let monstar = request("GET", "https://sunrinthon.ny64.kr/data/7/monstar").body;
+	let monstar = request("GET", "https://sunrinthon.ny64.kr/data/7/monster").body;
 
 	onMount(() => {
 		Chart.register();
