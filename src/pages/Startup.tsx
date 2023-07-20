@@ -6,7 +6,7 @@ import LeftArrow from '../components/LeftArrow';
 const Startup: Component = () => {
 	return (
 		<div id={style.app}>
-			<LeftArrow/>
+			
 			<div class={style.wrap}>
 				<div class={style.title}>
 					<p>당신은 하루에 카페인을</p>
@@ -18,7 +18,7 @@ const Startup: Component = () => {
 				</div>
 			</div>
 			<img class={style.img} alt="" src={signupImage} />
-			<button class={style.btn}>시작하기</button>
+			<button class={style.btn}><a href="/" class={style.novisit} style="text-decoration: none">시작하기</a></button>
 		</div>
 	);
 };

@@ -2,7 +2,21 @@ import { Component } from "solid-js";
 import Graph from '../components/Graph';
 import style from '../css/Chart.module.css';
 import LeftArrow from "../components/LeftArrow";
+import request from 'sync-request';
 const Button: Component = () => {
+    let data = [];
+    let data2: Array<number> = [];
+    for (let i=16;i<=22;i++) {
+        // @ts-ignore
+        data.push(Number(request("GET", `http://localhost:2000/data/${i-15}`).body));
+    }
+    for (let i=8;i<=14;i++) {
+        // @ts-ignore
+        data2.push(Number(request("GET", `http://localhost:2000/data/${i}`).body));
+    }
+    let sum: number = data.reduce((a, b) => a + b, 0);
+    console.log(data2)
+    console.log("Asd")
 	return (
         <div id={style.app}>
             <LeftArrow />
@@ -15,8 +29,11 @@ const Button: Component = () => {
                 </div>
             </div>
             <Graph></Graph>
-            <div style="width: 90%; height: 20%; border-radius: 10%; background-color: #D3D3D3; margin-left: 5%;">
-                <p>일</p>
+            <div class={style.asdfhelpme}>
+                <p style="margin-left: 10%; margin-top: 12%">일주일 동안 총 {sum}mg을 섭취하였습니다.</p>
+                <p style="margin-left: 10%">일주일 동안 총 평균 {Math.round(sum / 7)}mg을 섭취하였습니다.</p>
+                <p style="margin-left: 10%">지난 주 대비 {data2.reduce((a, b) => a + b, 0) - sum}mg 마셨습니다.</p>
+                <p style="margin-left: 10%">하루 권장량 대비 {data[6] - 150}mg 더 마셨습니다.</p>
             </div>
         </div>
 	);
