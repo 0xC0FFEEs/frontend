@@ -117,3 +117,7 @@ section {
 	border: none;
 	border-radius: 12px;
 }
+
+.btn a {
+	height: 54px;
+}

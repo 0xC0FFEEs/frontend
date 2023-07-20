@@ -1,12 +1,11 @@
 import type { Component } from "solid-js";
 import style from "../css/Startup.module.css";
 import signupImage from "../assets/images/signup_image.svg";
-import LeftArrow from '../components/LeftArrow';
+import LeftArrow from "../components/LeftArrow";
 
 const Startup: Component = () => {
 	return (
 		<div id={style.app}>
-			
 			<div class={style.wrap}>
 				<div class={style.title}>
 					<p>당신은 하루에 카페인을</p>
@@ -18,7 +17,11 @@ const Startup: Component = () => {
 				</div>
 			</div>
 			<img class={style.img} alt="" src={signupImage} />
-			<button class={style.btn}><a href="/" class={style.novisit} style="text-decoration: none">시작하기</a></button>
+			<button class={style.btn}>
+				<a href="/" class={style.novisit} style="color:white; text-decoration: none">
+					시작하기
+				</a>
+			</button>
 		</div>
 	);
 };
