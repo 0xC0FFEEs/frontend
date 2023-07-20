@@ -24,38 +24,38 @@ const coffee = [
 ];
 
 function getAmount(x: number) {
-	if (x == 1) {
-		return 180;
-	} else if (x == 2) {
-		return 100;
-	} else if (x == 3) {
-		return 60;
-	} else if (x == 4) {
-		return 80;
-	} else if (x == 5) {
-		return 30;
-	} else {
-		return 0;
-	}
+  if (x == 1) {
+    return 180;
+  } else if (x == 2) {
+    return 100;
+  } else if (x == 3) {
+    return 60;
+  } else if (x == 4) {
+    return 80;
+  } else if (x == 5) {
+    return 30;
+  } else {
+    return 0;
+  }
 }
 
 function minus(x: number) {
-	if (x != 0) {
-		modp2(getp2() - getAmount(x))
-	}
-	let a = getp() - getAmount(x)
-	if (a > 0) {
-		modp(a)
-	} else {
-		modp(0)
-	}
+  if (x != 0) {
+    modp2(getp2() - getAmount(x));
+  }
+  let a = getp() - getAmount(x);
+  if (a > 0) {
+    modp(a);
+  } else {
+    modp(0);
+  }
 }
 
 function plus(x: number) {
-	if (x != 1) {
-		modp2(getp2() + getAmount(x));
-	}
-	modp(getp() + getAmount(x))
+  if (x != 1) {
+    modp2(getp2() + getAmount(x));
+  }
+  modp(getp() + getAmount(x));
 }
 
 function onClickPer(a: boolean) {
@@ -277,21 +277,21 @@ const Calculate: Component = () => {
                   </ul>
                 </div>
               </div>
-			  <div class={style.list}>
-                  <div class={style.item}>
-                    <div class={style.img}></div>
-                    <div class={style.description}>
-                      <div class={style.name}>박카스</div>
-                      <div class={style.coffee}>30mg</div>
-                    </div>
-                    <div class={style.pmDiv}>
-                      <ul class={style.pm}>
-                        <li onClick={() => plus(5)}>+</li>
-                        <li onClick={() => minus(5)}>-</li>
-                      </ul>
-                    </div>
+              <div class={style.list}>
+                <div class={style.item}>
+                  <div class={style.img}></div>
+                  <div class={style.description}>
+                    <div class={style.name}>박카스</div>
+                    <div class={style.coffee}>30mg</div>
+                  </div>
+                  <div class={style.pmDiv}>
+                    <ul class={style.pm}>
+                      <li onClick={() => plus(5)}>+</li>
+                      <li onClick={() => minus(5)}>-</li>
+                    </ul>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
@@ -299,18 +299,23 @@ const Calculate: Component = () => {
       <div class={style.todayCoffee}>
         <h2>카페인</h2>
         <h1>{getp()}mg</h1>
-        <button class={style.btn} onClick={() => {
-			request("POST", "https://sunrinthon.ny64.kr/data/7/coffee", {
-				headers: {
-					"data": (getp() - getp2()).toString()
-				}
-			})
-			request("POST", "https://sunrinthon.ny64.kr/data/7/monster", {
-				headers: {
-					"data": (getp2()).toString()
-				}
-			})
-		}}>시작하기</button>
+        <button
+          class={style.btn}
+          onClick={() => {
+            request("POST", "http://localhost:50005/data/7/coffee", {
+              headers: {
+                data: (getp() - getp2()).toString(),
+              },
+            });
+            request("POST", "http://localhost:50005/data/7/monster", {
+              headers: {
+                data: getp2().toString(),
+              },
+            });
+          }}
+        >
+          시작하기
+        </button>
       </div>
     </div>
   );
