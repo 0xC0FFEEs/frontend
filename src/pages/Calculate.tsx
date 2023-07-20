@@ -40,6 +40,9 @@ function getAmount(x: number) {
 }
 
 function minus(x: number) {
+	if (x != 0) {
+		modp2(getp2() - getAmount(x))
+	}
 	let a = getp() - getAmount(x)
 	if (a > 0) {
 		modp(a)
@@ -50,7 +53,7 @@ function minus(x: number) {
 
 function plus(x: number) {
 	if (x != 1) {
-		
+		modp2(getp2() + getAmount(x));
 	}
 	modp(getp() + getAmount(x))
 }
@@ -297,7 +300,16 @@ const Calculate: Component = () => {
         <h2>카페인</h2>
         <h1>{getp()}mg</h1>
         <button class={style.btn} onClick={() => {
-			request("POST", "https://sunrinthon.ny64.kr/data/22/")
+			request("POST", "https://sunrinthon.ny64.kr/data/22/coffee", {
+				headers: {
+					"data": (getp() - getp2()).toString()
+				}
+			})
+			request("POST", "https://sunrinthon.ny64.kr/data/22/monster", {
+				headers: {
+					"data": (getp2()).toString()
+				}
+			})
 		}}>시작하기</button>
       </div>
     </div>
