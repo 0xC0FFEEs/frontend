@@ -307,7 +307,9 @@ const Calculate: Component = () => {
 						});
 					}}
 				>
-					<a href="/statistic">카페인 추가하기</a>
+					<a style="color: white" href="/statistic">
+						카페인 추가하기
+					</a>
 				</button>
 			</div>
 		</div>

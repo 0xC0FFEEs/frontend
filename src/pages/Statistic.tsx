@@ -64,7 +64,9 @@ const Statistic: Component = () => {
 			</div>
 
 			<button class={style.btn}>
-				<a href="/calculate">카페인 계산하기</a>
+				<a style="color: white" href="/calculate">
+					카페인 계산하기
+				</a>
 			</button>
 		</div>
 	);
