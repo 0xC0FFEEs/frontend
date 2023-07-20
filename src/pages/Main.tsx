@@ -10,7 +10,6 @@ import wjdqh from "../assets/images/wjdqh.svg";
 const Main: Component = () => {
 	return (
 		<div id={style.app}>
-			<LeftArrow />
 			<div class={style.wrap}>
 				<div class={style.title}>
 					<p>오늘 카페인 몇잔?</p>
