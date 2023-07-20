@@ -1,10 +1,12 @@
 import type { Component } from "solid-js";
 import style from "../css/Startup.module.css";
 import signupImage from "../assets/images/signup_image.svg";
+import LeftArrow from '../components/LeftArrow';
 
 const Startup: Component = () => {
 	return (
 		<div id={style.app}>
+			<LeftArrow/>
 			<div class={style.wrap}>
 				<div class={style.title}>
 					<p>당신은 하루에 카페인을</p>

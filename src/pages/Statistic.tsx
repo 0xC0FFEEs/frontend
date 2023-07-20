@@ -3,10 +3,7 @@ import { onMount } from "solid-js";
 import style from "../css/Statistics.module.css";
 import { Chart } from "chart.js";
 import { Doughnut } from "solid-chartjs";
-
-function getElementsString(a: Array<String>) {
-	return a.join(" ");
-}
+import LeftArrow from '../components/LeftArrow';
 
 const Statistic: Component = () => {
 	onMount(() => {
@@ -32,6 +29,7 @@ const Statistic: Component = () => {
 
 	return (
 		<div id={style.app}>
+			<LeftArrow/>
 			<section id={style.coffeeIntake}>
 				<div class={style.wrap}>
 					<div class={style.title}>
