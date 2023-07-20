@@ -1,21 +1,21 @@
 import type { Component } from "solid-js";
 import style from "../css/Main.module.css";
-import LeftArrow from '../components/LeftArrow';
-import Logo from '../icon.svg';
-import rPtks from '../assets/images/rPtks.svg';
-import xhdrP from '../assets/images/xhdrP.svg';
-import ckxm from '../assets/images/ckxm.svg';
-import wjdqh from '../assets/images/wjdqh.svg';
+import LeftArrow from "../components/LeftArrow";
+import Logo from "../icon.svg";
+import rPtks from "../assets/images/rPtks.svg";
+import xhdrP from "../assets/images/xhdrP.svg";
+import ckxm from "../assets/images/ckxm.svg";
+import wjdqh from "../assets/images/wjdqh.svg";
 
 const Main: Component = () => {
 	return (
 		<div id={style.app}>
-			<LeftArrow/>
+			<LeftArrow />
 			<div class={style.wrap}>
 				<div class={style.title}>
 					<p>오늘 카페인 몇잔?</p>
 				</div>
-				
+
 				<img class={style.img} alt="" src={Logo} />
 
 				<div class={style.subtitle}>
@@ -35,7 +35,7 @@ const Main: Component = () => {
 						</div>
 					</div>
 				</a>
-				<a href="/statistics">
+				<a href="/statistic">
 					<div class={style.item}>
 						<div class={style.left}>
 							<span>오늘의 통계</span>

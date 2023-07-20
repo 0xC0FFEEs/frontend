@@ -1,7 +1,7 @@
 {
 	"short_name": "오카몇?",
 	"name": "오늘 카페인 몇잔?",
-	"start_url": "/index.html",
+	"start_url": "/",
 	"display": "standalone",
 	"orientation": "portrait",
 	"theme_color": "#000000",
