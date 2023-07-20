@@ -1,4 +1,19 @@
+@import url(https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: SUIT, sans-serif, serif;
+
+	-webkit-touch-callout: none !important;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+}
+
 body {
-    margin: 0;
-    line-height: normal;
+	background-color: #121212;
+	color: #fff;
 }

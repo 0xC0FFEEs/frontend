@@ -1,0 +1,121 @@
+:root {
+	--progress-color: linear-gradient(#0b666a, #35a29f);
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+section {
+	padding-bottom: 2rem;
+	/* height: 100vh; */
+}
+
+.wrap {
+	margin-top: 3rem;
+	margin-left: 1.5rem;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.list .item {
+	display: flex;
+}
+
+.list .item:not(:last-child) {
+	margin-bottom: 24px;
+}
+
+.list .item .img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #636363;
+	margin-right: 7px;
+}
+
+.list .item .description {
+	display: flex;
+	flex-direction: column;
+}
+
+.list .item .description .coffee {
+	font-size: 14px;
+}
+
+#coffeeIntake .coffee_text {
+	font-size: 34px;
+	font-weight: 600;
+	color: #0e8c92;
+}
+
+.progress {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.progress .des {
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.2rem;
+}
+
+.progress progress {
+	width: 90%;
+	border: 0;
+	height: 16px;
+	border-radius: 50px;
+	margin-bottom: 2rem;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.progress progress::before {
+	background: turquoise;
+}
+
+.progress progress::-webkit-progress-bar {
+	border-radius: 50px;
+}
+.progress progress::-moz-progress-bar {
+	border-radius: 50px;
+}
+.progress progress::-webkit-progress-value {
+	background: linear-gradient(0.25turn, #0b666a, #35a29f);
+	border-radius: 50px;
+}
+.progress progress::-moz-progress-bar {
+	background: linear-gradient(0.25turn, #0b666a, #35a29f);
+	border-radius: 50px;
+}
+.progress progress::-progress-value {
+	background: linear-gradient(0.25turn, #0b666a, #35a29f);
+	border-radius: 50px;
+}
+
+.progress {
+	border: 0;
+}
+
+.btn {
+	margin: 0 auto;
+
+	background-color: #35a29f;
+	color: #fff;
+	font-weight: 500;
+	font-size: 20px;
+	width: 90%;
+	height: 54px;
+	border: none;
+	border-radius: 12px;
+}
+
+

@@ -1,14 +1,15 @@
 .child {
-  position: absolute;
-  top: 394px;
-  left: 154px;
-  width: 83.77px;
-  height: 63.45px;
-}
-.div {
-  position: relative;
-  background-color: #121212;
-  width: 100%;
-  height: 852px;
-  overflow: hidden;
-}
+	position: absolute;
+	top: 394px;
+	left: 154px;
+	width: 83.77px;
+	height: 63.45px;
+  }
+  .div {
+	position: relative;
+	background-color: #121212;
+	width: 100%;
+	height: 852px;
+	overflow: hidden;
+  }
+  

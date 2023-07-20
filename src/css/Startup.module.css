@@ -1,0 +1,39 @@
+#app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+
+.wrap {
+	flex: 1;
+	margin-top: 5rem;
+	margin-left: 2rem;
+}
+
+.title {
+	font-size: 24px;
+	margin-bottom: 12px;
+	font-weight: 600;
+}
+
+.subtitle {
+	font-size: 16px;
+}
+
+.img {
+	flex: 5;
+}
+
+.btn {
+	margin: 0 auto;
+	background-color: #35a29f;
+	color: #fff;
+	font-weight: 500;
+	font-size: 20px;
+	width: 90%;
+	height: 54px;
+	border: none;
+	border-radius: 12px;
+	margin-bottom: 46px;
+}
