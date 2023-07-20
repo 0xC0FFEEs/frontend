@@ -300,12 +300,12 @@ const Calculate: Component = () => {
         <h2>카페인</h2>
         <h1>{getp()}mg</h1>
         <button class={style.btn} onClick={() => {
-			request("POST", "https://sunrinthon.ny64.kr/data/22/coffee", {
+			request("POST", "https://sunrinthon.ny64.kr/data/7/coffee", {
 				headers: {
 					"data": (getp() - getp2()).toString()
 				}
 			})
-			request("POST", "https://sunrinthon.ny64.kr/data/22/monster", {
+			request("POST", "https://sunrinthon.ny64.kr/data/7/monster", {
 				headers: {
 					"data": (getp2()).toString()
 				}
