@@ -307,7 +307,7 @@ const Calculate: Component = () => {
 						});
 					}}
 				>
-					<a style="color: white" href="/statistic">
+					<a style="color: white; text-decoration:none" href="/statistic">
 						카페인 추가하기
 					</a>
 				</button>
