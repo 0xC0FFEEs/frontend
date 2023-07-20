@@ -4,8 +4,13 @@ import style from "../css/Statistics.module.css";
 import { Chart } from "chart.js";
 import { Doughnut } from "solid-chartjs";
 import LeftArrow from "../components/LeftArrow";
+import request from "sync-request";
 
 const Statistic: Component = () => {
+	let todayCoffee = request("GET", "https://sunrinthon.ny64.kr/data/7").body;
+	let coffee = request("GET", "https://sunrinthon.ny64.kr/data/7/coffee").body;
+	let monstar = request("GET", "https://sunrinthon.ny64.kr/data/7/monstar").body;
+
 	onMount(() => {
 		Chart.register();
 	});
@@ -14,7 +19,7 @@ const Statistic: Component = () => {
 		datasets: [
 			{
 				label: "Sales",
-				data: [50, 60],
+				data: [todayCoffee, 150 - todayCoffee > 0 ? 150 - todayCoffee : 0],
 				backgroundColor: ["#0B666A", "#D3D3D3"],
 			},
 		],
@@ -34,7 +39,7 @@ const Statistic: Component = () => {
 				<div class={style.wrap}>
 					<div class={style.title}>
 						<p>오늘의 카페인 섭취량</p>
-						<p class={style.coffee_text}>200mg</p>
+						<p class={style.coffee_text}>{todayCoffee}mg</p>
 					</div>
 				</div>
 				<div class={style.chart_div}>
@@ -45,15 +50,15 @@ const Statistic: Component = () => {
 			<div class={style.progress}>
 				<div class={style.des}>
 					<div>커피</div>
-					<div>00mg</div>
+					<div>{JSON.parse(coffee)[0].data}mg</div>
 				</div>
 				<progress value="40" max="100"></progress>
 			</div>
 
 			<div class={style.progress}>
 				<div class={style.des}>
-					<div>커피</div>
-					<div>00mg</div>
+					<div>몬스터</div>
+					<div>{JSON.parse(monstar)[0].data}mg</div>
 				</div>
 				<progress value="40" max="100"></progress>
 			</div>
