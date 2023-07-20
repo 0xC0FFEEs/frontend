@@ -52,7 +52,7 @@ const Statistic: Component = () => {
 					<div>커피</div>
 					<div>{JSON.parse(coffee)[0].data}mg</div>
 				</div>
-				<progress value={JSON.parse(coffee)[0].data} max="150"></progress>
+				<progress value={JSON.parse(coffee)[0].data} max="300"></progress>
 			</div>
 
 			<div class={style.progress}>
@@ -60,7 +60,7 @@ const Statistic: Component = () => {
 					<div>몬스터</div>
 					<div>{JSON.parse(monstar)[0].data}mg</div>
 				</div>
-				<progress value={JSON.parse(monstar)[0].data} max="150"></progress>
+				<progress value={JSON.parse(monstar)[0].data} max="300"></progress>
 			</div>
 
 			<button class={style.btn}>
